@@ -1,7 +1,7 @@
 from Tkinter import *
 from tkMessageBox import *
 import sqlite3
-con = sqlite3.Connection('Phonebook_007')
+con = sqlite3.Connection('Phonebook_013')
 cur = con.cursor()
 cur.execute("create table if not exists user_info(ph_id integer primary key AUTOINCREMENT, Fname varchar(20), Mname varchar(20), Lname varchar(20), Company varchar(20), Address varchar(30), City varchar(25), Pin integer, Website varchar(80), DOB varchar(10) )")
 cur.execute("create table if not exists phone_info(ph_id integer,ph_type varchar (15), Ph_no varchar(20) ,foreign key(ph_id)REFERENCES user_info(ph_id))")
